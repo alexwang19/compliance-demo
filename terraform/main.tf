@@ -4,8 +4,8 @@ resource "aws_s3_bucket" "sko_bucket" {
 
 resource "aws_s3_bucket_public_access_block" "sko_bucket" {
   bucket = aws_s3_bucket.sko_bucket.id
-  block_public_acls = false
-  block_public_policy = false
-  restrict_public_buckets = false
-  ignore_public_acls      = false
+  block_public_acls = true
+  block_public_policy = true
+  restrict_public_buckets = true
+  ignore_public_acls      = true
 }
