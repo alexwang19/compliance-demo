@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" "sko_bucket" {
-  bucket = "sysdig-sko-bucket-1234"
+resource "aws_s3_bucket" "sko_bucket1" {
+  bucket = "sysdig-sko-bucket1-1234"
 }
 
-resource "aws_s3_bucket_public_access_block" "sko_bucket" {
-  bucket = aws_s3_bucket.sko_bucket.id
+resource "aws_s3_bucket_public_access_block" "sko_bucket1" {
+  bucket = aws_s3_bucket.sko_bucket1.id
   block_public_acls = true
   block_public_policy = true
   restrict_public_buckets = true
