@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "sko_bucket" {
-  bucket = "sysdig-sko-bucket-123"
+  bucket = "sysdig-sko-bucket-1243"
 }
 
 resource "aws_s3_bucket_public_access_block" "sko_bucket" {
