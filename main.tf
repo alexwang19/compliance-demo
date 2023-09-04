@@ -1,14 +1,8 @@
-########################
-# Bucket creation
-########################
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "testing-bucket-sysdig123"
+resource "aws_s3_bucket" "sko_bucket" {
+  bucket = "sysdig-sko-bucket-1234"
 }
 
-##########################
-# Bucket private access
-##########################
-resource "aws_s3_bucket_acl" "my_bucket_acl" {
-  bucket = aws_s3_bucket.my_bucket.id
-  acl    = "private"
+resource "aws_s3_bucket_public_access_block" "sko_bucket" {
+  bucket = aws_s3_bucket.sko_bucket.id
+  acl = "private"
 }
