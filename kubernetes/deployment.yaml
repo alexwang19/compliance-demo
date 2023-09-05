@@ -19,8 +19,8 @@ spec:
       - name: app
         image: nginx:1.14.2
         securityContext:
-          runAsUser: 2000
-          allowPrivilegeEscalation: false
+          runAsUser: 100
+          allowPrivilegeEscalation: true
         resources:
           requests:
             cpu: 100m
