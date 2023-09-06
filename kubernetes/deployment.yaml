@@ -18,6 +18,8 @@ spec:
       containers:
       - name: app
         image: nginx:1.14.2
+        securityContext:
+          allowPrivilegeEscalation: true
         resources:
           requests:
             cpu: 100m
